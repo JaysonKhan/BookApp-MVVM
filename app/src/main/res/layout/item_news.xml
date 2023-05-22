@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    android:elevation="4dp"
+    android:padding="2dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            tools:src="@mipmap/ic_launcher"
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp" />
+        <ImageView
+            android:id="@+id/img_cover"
+            tools:src="@mipmap/ic_launcher"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:id="@+id/txt_fan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="4"
+            android:fontFamily="@font/amiko"
+            android:text="Falsafa"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/btn_goto"
+            android:src="@drawable/right"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="right|center"
+            android:layout_margin="10dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>

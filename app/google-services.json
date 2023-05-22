@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "983548833890",
+    "project_id": "sessions-3b47c",
+    "storage_bucket": "sessions-3b47c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983548833890:android:6a0403094738773a8c613b",
+        "android_client_info": {
+          "package_name": "uz.gita.sessiya2024"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983548833890-a84371b6nif7mig81gvhfgj2d4vm77dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeX6HwEaq7GzE3nbfpk7u2DcDcucbXaLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983548833890-a84371b6nif7mig81gvhfgj2d4vm77dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
