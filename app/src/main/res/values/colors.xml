@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#1C1C1C</color>
+    <color name="white">#FDFCFF</color>
+    <color name="primary">#6750A4</color>
+    <color name="surface">#1B7695</color>
+    <color name="surfaceDark">#17637E</color>
+    <color name="onPrimary">#FFFFFFFF</color>
+    <color name="secondary">#FFA95E</color>
+    <color name="secondaryDark">#F0A157</color>
+    <color name="background">#B7A0F4</color>
+    <color name="onBackground">#141C2E</color>
+    <color name="shimmer">#E7DDFF</color>
+</resources>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/homeScreen">
+
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="uz.gita.sessiya2024.presentation.ui.home.HomeScreen"
+        android:label="screen_home"
+        tools:layout="@layout/screen_home" >
+        <action
+            android:id="@+id/action_homeScreen_to_screenList"
+            app:destination="@id/screenList" />
+        <action
+            android:id="@+id/action_homeScreen_to_bookInfoScreen"
+            app:destination="@id/bookInfoScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_newBooksList"
+            app:destination="@id/newBooksList" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedScreen"
+        android:name="uz.gita.sessiya2024.presentation.ui.saved.SavedScreen"
+        android:label="screen_saved"
+        tools:layout="@layout/screen_saved" >
+        <action
+            android:id="@+id/action_savedScreen_to_screenList"
+            app:destination="@id/screenList" />
+    </fragment>
+    <fragment
+        android:id="@+id/exploreScreen"
+        android:name="uz.gita.sessiya2024.presentation.ui.explore.ExploreScreen"
+        android:label="screen_explore"
+        tools:layout="@layout/screen_explore" >
+        <action
+            android:id="@+id/action_exploreScreen_to_bookInfoScreen"
+            app:destination="@id/bookInfoScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileScreen"
+        android:name="uz.gita.sessiya2024.presentation.ui.profile.ProfileScreen"
+        android:label="screen_profile"
+        tools:layout="@layout/screen_profile" />
+    <fragment
+        android:id="@+id/bookInfoScreen"
+        android:name="uz.gita.sessiya2024.presentation.ui.bookinfo.BookInfoScreen"
+        android:label="screen_book_info"
+        tools:layout="@layout/screen_book_info" >
+        <argument
+            android:name="book"
+            app:argType="uz.gita.sessiya2024.data.model.BookData" />
+        <action
+            android:id="@+id/action_bookInfoScreen_to_readBookScreen"
+            app:destination="@id/readBookScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/readBookScreen"
+        android:name="uz.gita.sessiya2024.presentation.ui.read.ReadBookScreen"
+        android:label="screen_read_book"
+        tools:layout="@layout/screen_read_book" >
+        <argument
+            android:name="data"
+            app:argType="uz.gita.sessiya2024.data.model.BookData" />
+    </fragment>
+    <fragment
+        android:id="@+id/screenList"
+        android:name="uz.gita.sessiya2024.presentation.ui.list.ScreenList"
+        android:label="ScreenList"
+        tools:layout="@layout/screen_list">
+        <action
+            android:id="@+id/action_screenList_to_bookInfoScreen"
+            app:destination="@id/bookInfoScreen" />
+        <argument
+            android:name="data"
+            app:argType="uz.gita.sessiya2024.data.model.TypeData" />
+    </fragment>
+    <fragment
+        android:id="@+id/newBooksList"
+        android:name="uz.gita.sessiya2024.presentation.ui.newbooks.NewBooksList"
+        android:label="NewBooksList" >
+        <action
+            android:id="@+id/action_newBooksList_to_bookInfoScreen"
+            app:destination="@id/bookInfoScreen" />
+    </fragment>
+</navigation>
