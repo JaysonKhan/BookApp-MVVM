@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
-            if(destination.id == R.id.readBookScreen) {
+            if(destination.id == R.id.readBookScreen || destination.id==R.id.bookInfoScreen || destination.id==R.id.screenList || destination.id==R.id.newBooksList) {
                 binding.bottomNavigation.visibility = View.GONE
             } else {
                 binding.bottomNavigation.visibility = View.VISIBLE

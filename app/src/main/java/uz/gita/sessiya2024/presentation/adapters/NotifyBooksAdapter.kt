@@ -29,14 +29,12 @@ class NotifyBooksAdapter: ListAdapter<BookEntity, NotifyBooksAdapter.NotifyViewH
         fun bind(item: BookEntity) {
 
             binding.root.setOnClickListener {
-                item.isnewbookread = 0
                 listener?.invoke(item)
             }
 
            binding.txtFan.text = item.name
 
-                Glide
-                    .with(binding.root.context)
+                Glide.with(binding.root.context)
                     .load(item.unv_logo)
                     .centerCrop()
                     .into(binding.imgLogo)

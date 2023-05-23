@@ -28,18 +28,28 @@ class BookInfoScreen:Fragment(R.layout.screen_book_info) {
         binding.progress.visibility = View.INVISIBLE
         viewModel.progressLiveData.observe(viewLifecycleOwner){
             if (it){
+                Toast.makeText(context, "Yuklanish jarayonda⚡...", Toast.LENGTH_SHORT).show()
                 binding.progress.visibility = View.VISIBLE
             }else{
+                Toast.makeText(context, "Yuklandi🌩️...", Toast.LENGTH_SHORT).show()
                 binding.progress.visibility = View.INVISIBLE
+                binding.downloadBtn.animate()
+                    .translationX(500f)
+                    .setDuration(2000)
+                    .start()
             }
         }
         binding.apply {
             val data = args.book
 
             if (File(context?.filesDir, "${args.book.reference}.pdf").exists()){
-                downloadBtn.setImageResource(R.drawable.ic_downloaded)
+                downloadBtn.setImageResource(R.drawable.done)
                 linearLayout.visibility = View.VISIBLE
                 downloadBtn.isClickable = false
+                binding.downloadBtn.animate()
+                    .translationX(500f)
+                    .setDuration(0)
+                    .start()
             }else{
                 linearLayout.visibility = View.GONE
                 downloadBtn.isClickable = true
@@ -74,7 +84,7 @@ class BookInfoScreen:Fragment(R.layout.screen_book_info) {
             }
 
             viewModel.fileDownloadedLiveData.observe(viewLifecycleOwner) {
-                downloadBtn.setImageResource(R.drawable.ic_downloaded)
+                downloadBtn.setImageResource(R.drawable.done)
                 linearLayout.visibility = View.VISIBLE
             }
 

@@ -1,6 +1,7 @@
 package uz.gita.sessiya2024.domain.repository
 
 import android.content.Context
+import android.util.Log
 import kotlinx.coroutines.flow.Flow
 import uz.gita.sessiya2024.data.model.BookData
 import com.google.firebase.firestore.FirebaseFirestore
@@ -71,6 +72,7 @@ class BookREpositoryImpl @Inject constructor(
                                         ent.isnewbookread = 1
                                     dao.addBook(ent)
                                 } else {
+                                    ent.isnewbookread = dao.getBook(ent.id).isnewbookread
                                     dao.updateBook(ent)
                                 }
                             }

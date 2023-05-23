@@ -40,6 +40,8 @@ class NewBooksViewModelImpl @Inject constructor(
 
     override fun updateBook(bookEntity: BookEntity) {
         bookDao.updateBook(bookEntity)
+        val result = bookDao.getNewBooks()
+        loadBookListLiveData.value =result
     }
 
 }

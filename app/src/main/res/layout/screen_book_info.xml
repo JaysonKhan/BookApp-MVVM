@@ -67,16 +67,17 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/download_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:padding="8dp"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/ic_download"
-                    app:layout_constraintEnd_toEndOf="@id/book_image"
-                    app:layout_constraintTop_toTopOf="@id/book_image" />
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/download"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/book_image"
+                    app:layout_constraintTop_toBottomOf="@+id/book_image" />
 
                 <TextView
                     android:id="@+id/txt_kurs"

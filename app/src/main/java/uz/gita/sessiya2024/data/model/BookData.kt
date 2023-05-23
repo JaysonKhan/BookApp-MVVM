@@ -19,7 +19,9 @@ data class BookData(
 ): Serializable {
     fun toEntity(unv_title:String = "", unv_logo:String = ""):BookEntity{
         return BookEntity(
-           id, name, pdf_reference, cover_reference,kurs, year, owner, date, university_short, reference, 0, unv_title, unv_logo,description
+           id = id, name = name, pdf_reference = pdf_reference, cover_reference = cover_reference, kurs = kurs,
+            year = year, owner = owner, date = date, university_short = university_short, reference = reference,
+            unv_title = unv_title, unv_logo = unv_logo, description = description
             )
     }
 }
