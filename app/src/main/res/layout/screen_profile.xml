@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <com.google.android.material.appbar.AppBarLayout
+        android:background="@color/background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -108,8 +110,10 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/shape_send"
         android:drawableEnd="@drawable/send"
+        android:drawableTint="@color/white"
         android:paddingRight="16dp"
         android:text="Send"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editTextText2"
         app:layout_constraintStart_toStartOf="@+id/editTextText2" />
@@ -151,6 +155,7 @@
         android:ems="10"
         android:hint="Nomer yoki telegram @havolangiz"
         android:inputType="text"
+        android:textColorHint="@color/white"
         android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/editTextText2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -165,6 +170,7 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/shape_editdescription"
         android:ems="10"
+        android:textColorHint="@color/white"
         android:hint="Fikringizni shu yerda yozib qoldiring"
         android:inputType="textMultiLine"
         android:padding="10dp"

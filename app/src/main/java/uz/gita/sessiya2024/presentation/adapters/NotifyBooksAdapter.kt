@@ -52,7 +52,7 @@ class NotifyBooksAdapter: ListAdapter<BookEntity, NotifyBooksAdapter.NotifyViewH
             LayoutInflater.from(parent.context), parent, false))
 
     override fun onBindViewHolder(holder: NotifyViewHolder, position: Int)  {
-        holder.itemView.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.anim2)
+        holder.itemView.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.animatsiya)
         holder.bind(getItem(position))
     }
     fun setBookClickListener(block: (BookEntity) -> Unit) {

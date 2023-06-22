@@ -1,51 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="350dp"
+    android:layout_width="119dp"
+    android:layout_height="162dp"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
-        android:id="@+id/img_new"
-        android:elevation="4dp"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/newbook"
-        android:rotation="-15"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.86"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/view"
-        android:elevation="4dp"
-        android:padding="20dp"
-        android:layout_margin="5dp"
-        app:cardCornerRadius="4dp"
-        android:layout_width="match_parent"
+        android:id="@+id/bgwhite"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        app:cardBackgroundColor="@color/shimmer"
+        android:src="@drawable/bgwhite"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_new"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="4dp"
+        android:rotation="-15"
+        android:src="@drawable/newbook"
+        app:layout_constraintBottom_toTopOf="@+id/txt_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_kurs" />
+
 
     <TextView
         android:id="@+id/txt_title"
-        android:layout_width="0dp"
-        android:gravity="center"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/amiko"
         android:textColor="@color/onBackground"
-        android:textSize="16sp"
-        android:elevation="5dp"
-        app:layout_constraintBottom_toTopOf="@id/txt_year"
-        app:layout_constraintEnd_toEndOf="@+id/book_cover_image"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="@+id/book_cover_image"
-        app:layout_constraintTop_toBottomOf="@+id/book_cover_image"
-        app:layout_constraintVertical_bias="0.48000002"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txt_year"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/bgwhite"
+        app:layout_constraintTop_toTopOf="@+id/bgwhite"
+        app:layout_constraintVertical_bias="0.26"
         app:layout_constraintVertical_chainStyle="packed"
         tools:text="Algoritmlash" />
 
@@ -53,45 +52,27 @@
         android:id="@+id/txt_year"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:layout_marginBottom="3dp"
         android:textColor="#CC141C2E"
-        android:textSize="14sp"
-        android:elevation="5dp"
-
+        android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/txt_kurs"
-        app:layout_constraintEnd_toEndOf="@+id/txt_title"
         app:layout_constraintStart_toStartOf="@+id/txt_title"
         app:layout_constraintTop_toBottomOf="@+id/txt_title"
-        tools:text="2022- yildagi" />
-
-    <ImageView
-        android:id="@+id/book_cover_image"
-        android:layout_width="150dp"
-        android:layout_height="190dp"
-        android:elevation="4dp"
-        android:scaleType="centerCrop"
-        android:src="@color/surface"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:text="2022-yildagi" />
 
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.10" />
+
+    <!-- Qo'shimcha o'zgarishlar -->
+
 
     <TextView
         android:id="@+id/txt_kurs"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/amiko"
         android:text="1-Kurs"
-        android:textSize="24sp"
-        android:elevation="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/txt_title"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/img_new"
         app:layout_constraintStart_toStartOf="@+id/txt_title"
         app:layout_constraintTop_toBottomOf="@+id/txt_year" />
 
@@ -99,13 +80,11 @@
         android:id="@+id/txt_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:text="29.04.2023"
-        android:textSize="12sp"
-        android:elevation="5dp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_new"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -47,7 +47,7 @@ class UniversityAdapter : ListAdapter<TypeData, UniversityAdapter.UniversityView
             LayoutInflater.from(parent.context), parent, false))
 
     override fun onBindViewHolder(holder: UniversityViewHolder, position: Int)  {
-        holder.itemView.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.anim2)
+        holder.itemView.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.animatsiya)
         holder.bind(getItem(position))
     }
     fun setBookClickListener(block: (TypeData) -> Unit) {

@@ -34,7 +34,9 @@ class TypeAdapter : ListAdapter<TypeData, TypeAdapter.TypeViewHolder>(TypeDiffUt
             val adapter = BookAdapter()
             adapter.clickListener = listener
             binding.container.adapter = adapter
-            adapter.submitList(item.list)
+            adapter.submitList(item.list.sortedBy {
+                it.kurs
+            })
             binding.container.layoutManager = GridLayoutManager(binding.container.context, 1, RecyclerView.HORIZONTAL, false)
 
             binding.btnGoto.setOnClickListener {
@@ -55,7 +57,7 @@ class TypeAdapter : ListAdapter<TypeData, TypeAdapter.TypeViewHolder>(TypeDiffUt
         LayoutInflater.from(parent.context), parent, false))
 
     override fun onBindViewHolder(holder: TypeViewHolder, position: Int){
-        holder.itemView.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.anim2)
+        holder.itemView.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.animatsiya)
         holder.bind(getItem(position))
     }
     fun setBookClickListener(block: (BookData) -> Unit) {

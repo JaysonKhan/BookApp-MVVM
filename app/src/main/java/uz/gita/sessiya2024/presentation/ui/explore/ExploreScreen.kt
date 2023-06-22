@@ -58,7 +58,7 @@ class ExploreScreen : Fragment(R.layout.screen_explore) {
             viewModel.searchListLiveData.observe(viewLifecycleOwner){
                 adapter.submitList(it)
             }
-            recyclerExplore.layoutManager = GridLayoutManager(context, 2)
+            recyclerExplore.layoutManager = GridLayoutManager(context, 3)
 
         }
 

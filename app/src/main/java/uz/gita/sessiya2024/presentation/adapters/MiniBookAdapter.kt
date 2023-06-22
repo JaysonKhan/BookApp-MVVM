@@ -55,11 +55,6 @@ class MiniBookAdapter : ListAdapter<BookData, MiniBookAdapter.ViewHolder>(MyDiff
             }else{
                 imgNew.visibility = View.GONE
             }
-
-            Glide
-                .with(root.context)
-                .load(data.cover_reference)
-                .into(bookCoverImage)
         }
 
     }
@@ -86,7 +81,7 @@ class MiniBookAdapter : ListAdapter<BookData, MiniBookAdapter.ViewHolder>(MyDiff
         ViewHolder(ItemBookMiniBinding.inflate(LayoutInflater.from(parent.context), parent, false))
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemView.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.animatsiya)
+        holder.itemView.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.anim2)
         getItem(position)?.let { holder.bind(it) }
     }
 

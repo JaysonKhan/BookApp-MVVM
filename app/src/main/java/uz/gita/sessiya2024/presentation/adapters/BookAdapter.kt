@@ -54,12 +54,6 @@ class BookAdapter : ListAdapter<BookData, BookAdapter.ViewHolder>(MyDiffUtil) {
             }else{
                 imgNew.visibility = View.GONE
             }
-
-            Glide
-                .with(root.context)
-                .load(data.cover_reference)
-                .centerCrop()
-                .into(bookCoverImage)
         }
 
     }

@@ -62,7 +62,7 @@ class ScreenList:Fragment(R.layout.screen_list) {
                 }
                 adapter.submitList(list)
             }
-            recyclerList.layoutManager = GridLayoutManager(context, 2)
+            recyclerList.layoutManager = GridLayoutManager(context, 3)
             btnBack.setOnClickListener {
                 findNavController().navigateUp()
             }
