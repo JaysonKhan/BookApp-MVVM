@@ -38,7 +38,15 @@ class ExploreViewModelImpl @Inject constructor(
     }
 
     override fun searchFun(text: String) {
-       searchListLiveData.value =  useCase.search(text)
+
+       searchListLiveData.value =  useCase.search(text).apply {
+           if (isNullOrEmpty()){
+               onExeption.value = true
+               onExeptionString.value = "Bunday kitob mavjud emas :)"
+           }else{
+               onExeption.value = false
+           }
+       }
     }
 
 
